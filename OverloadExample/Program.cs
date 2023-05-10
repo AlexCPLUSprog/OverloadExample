@@ -59,6 +59,7 @@ namespace OperatorOverloading
             player01.name = "Бофур";
             player02.coins = 12;
             player02.name = "Бильбо";
+            //player01 += player02;
             Console.WriteLine("Игрок {0} - {1} монет\nИгрок {2} - {3} монет", player01.name, player01.coins, player02.name, player02.coins);
             if (player01 > player02)
             {
@@ -68,7 +69,13 @@ namespace OperatorOverloading
             {
                 Console.WriteLine("Игрок {1} богаче игрока {0}", player01.name, player02.name);
             }
-
+            
+            Console.WriteLine($"Имя игрока 1 {player01.name}, монеты: {player01.coins}");
+            Console.WriteLine($"Имя игрока 2 {player02.name}, монеты: {player02.coins}");
+            player01 += player02;
+            Console.WriteLine("player01 += player02");
+            Console.WriteLine($"Имя игрока 1 {player01.name}, монеты: {player01.coins}");
+            Console.WriteLine($"Имя игрока 2 {player02.name}, монеты: {player02.coins}");
         }
     }
 }
